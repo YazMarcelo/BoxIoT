@@ -10,6 +10,7 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -57,6 +58,25 @@ public class UsuarioController {
 		ModelAndView modelAndView = new ModelAndView("usuario/consulta");
 		modelAndView.addObject("usuarios", usuarioDAO.list());
 		return modelAndView;
+	}
+	
+	@RequestMapping("/alteracao/{id}")
+	public ModelAndView alterar(@RequestParam(value="id") int id,Usuario usuario) {
+		ModelAndView modelAndView = new ModelAndView("usuario/alteracao");
+		modelAndView.addObject("usuario", usuarioDAO.obterUsuario(id));
+		return modelAndView;
+	}
+	
+	@RequestMapping(method = RequestMethod.POST)
+	public ModelAndView update(@Valid Usuario usuario, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes) {
+		if (bindingResult.hasErrors()) {
+			return form(usuario);
+		}
+		System.out.println("salvar produto...");
+		usuarioDAO.save(usuario);
+		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
+		return new ModelAndView("redirect:usuario");
 	}
 
 }

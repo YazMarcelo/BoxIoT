@@ -21,8 +21,14 @@ public class UsuarioDAO {
 
 	public List<Usuario> list() {
 		return manager
-				.createQuery("select distinct(u) from usuario u", Usuario.class)
+				.createQuery("select distinct(u) from Usuario u", Usuario.class)
 				.getResultList();
+	}
+
+	public Usuario obterUsuario(int id) {
+		return manager
+				.createQuery("select distinct(u) from Usuario u where u.id = "+id, Usuario.class)
+				.getSingleResult();
 	}
 
 }

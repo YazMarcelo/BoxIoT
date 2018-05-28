@@ -47,7 +47,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario/cadastro">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
                             <i class="fa fa-user"></i>
                             <p>Usuário</p>
                         </a>
