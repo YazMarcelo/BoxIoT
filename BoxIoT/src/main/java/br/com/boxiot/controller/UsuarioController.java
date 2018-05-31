@@ -60,7 +60,7 @@ public class UsuarioController {
 		return modelAndView;
 	}
 	
-	@RequestMapping("/alteracao/{id}")
+	/*@RequestMapping("/alteracao/{id}")
 	public ModelAndView alterar(@RequestParam(value="id") int id,Usuario usuario) {
 		ModelAndView modelAndView = new ModelAndView("usuario/alteracao");
 		modelAndView.addObject("usuario", usuarioDAO.obterUsuario(id));
@@ -77,6 +77,6 @@ public class UsuarioController {
 		usuarioDAO.save(usuario);
 		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
 		return new ModelAndView("redirect:usuario");
-	}
+	}*/
 
 }
