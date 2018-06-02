@@ -41,7 +41,7 @@
             <div class="sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav-item active ">
-                        <a class="nav-link" href="/Usuario/Index">
+                        <a class="nav-link" href="${pageContext.request.contextPath}">
                             <i class="material-icons">dashboard</i>
                             <p>Dashboard</p>
                         </a>
@@ -50,6 +50,24 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
                             <i class="fa fa-user"></i>
                             <p>Usuário</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <p>Item</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                            <i class="fa fa-home"></i>
+                            <p>Local</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                            <i class="fa fa-unlock-alt"></i>
+                            <p>Modo</p>
                         </a>
                     </li>
                 </ul>
@@ -79,38 +97,7 @@
                             </div>
                         </form>
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <i class="material-icons">dashboard</i>
-                                    <p>
-                                        <span class="d-lg-none d-md-block">Stats</span>
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="material-icons">notifications</i>
-                                    <span class="notification">5</span>
-                                    <p>
-                                        <span class="d-lg-none d-md-block">Some Actions</span>
-                                    </p>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                                    <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                                    <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                                    <a class="dropdown-item" href="#">Another Notification</a>
-                                    <a class="dropdown-item" href="#">Another One</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="">
-                                    <i class="material-icons">person</i>
-                                    <p>
-                                        <span class="d-lg-none d-md-block">Account</span>
-                                    </p>
-                                </a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
