@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/item">
                             <i class="fa fa-lightbulb-o"></i>
                             <p>Item</p>
                         </a>
