@@ -17,7 +17,11 @@ public class ItemDAO {
 	private EntityManager manager;
 
 	public void save(Item item) {
-		manager.persist(item);
+		if(item.getId() != null) {
+			manager.merge(item);
+		} else {
+			manager.persist(item);	
+		}
 	}
 
 	public List<Item> list() {

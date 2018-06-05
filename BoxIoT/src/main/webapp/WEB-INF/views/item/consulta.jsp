@@ -35,10 +35,10 @@
 											<td>${item.descricao}</td>
 											<td>${item.saida}</td>
 											<td style="width:100px;" class="center">
-                                            	<a href="/usuario/alteracao/${item.id}" style="padding-right:20px;">
+                                            	<a href="${pageContext.request.contextPath}/item/alteracao/${item.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a href="/usuario/excluir/${item.id}">
+                                                <a href="/item/excluir/${item.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>
