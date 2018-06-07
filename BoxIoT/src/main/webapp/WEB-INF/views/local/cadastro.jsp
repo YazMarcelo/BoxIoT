@@ -12,10 +12,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Cadastrar Item</h4>
+                        <h4 class="card-title">Cadastrar Local</h4>
                     </div>
                     <div class="card-body">
-                    	<form:form method="post" action="/BoxIoT/item" commandName="item">
+                    	<form:form method="post" action="/BoxIoT/local commandName="local">
                             <input type="hidden" name="id_controle" value="" />
                             <div class="row">
                                 <div class="col-md-12">

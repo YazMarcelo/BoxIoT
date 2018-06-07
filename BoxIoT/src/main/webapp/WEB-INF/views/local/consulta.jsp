@@ -30,7 +30,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                	<c:forEach locais="${locais}" var="local">
+                                	<c:forEach items="${locais}" var="local">
 										<tr>
 											<td>${local.descricao}</td>
 											<td>${local.saida}</td>
