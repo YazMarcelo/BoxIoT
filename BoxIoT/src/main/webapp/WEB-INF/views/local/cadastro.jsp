@@ -26,15 +26,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                         <label class="bmd-label-floating" for="email">Saída</label>
-                                         <form:input type="number" path="saida" class="form-control"/>
-										 <form:errors path="saida" />
-                                    </div>
-                                </div>
-                            </div>
+
                             <button type="submit" id="btn-salvar" class="btn btn-primary pull-right">Salvar</button>
                             <button type="submit" hidden id="btn-submit" class="btn btn-primary pull-right">Salvar</button>
                             <div class="clearfix"></div>

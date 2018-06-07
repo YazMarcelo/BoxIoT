@@ -26,14 +26,12 @@
                                 <thead class=" text-primary">
                                     <tr>
                                         <th>Descrição</th>
-                                        <th>Saída</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                 	<c:forEach items="${locais}" var="local">
 										<tr>
 											<td>${local.descricao}</td>
-											<td>${local.saida}</td>
 											<td style="width:100px;" class="center">
                                             	<a href="${pageContext.request.contextPath}/local/alteracao/${local.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
