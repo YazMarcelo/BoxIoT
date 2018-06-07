@@ -15,7 +15,7 @@
                         <h4 class="card-title">Cadastrar Local</h4>
                     </div>
                     <div class="card-body">
-                    	<form:form method="post" action="/BoxIoT/local commandName="local">
+                    	<form:form method="post" action="/BoxIoT/local" commandName="local">
                             <input type="hidden" name="id_controle" value="" />
                             <div class="row">
                                 <div class="col-md-12">
