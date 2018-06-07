@@ -42,9 +42,9 @@ public class ItemController {
 		if (bindingResult.hasErrors()) {
 			return form(item);
 		}
-		System.out.println("salvar produto...");
+		System.out.println("salvar item...");
 		itemDAO.save(item);
-		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
+		redirectAttributes.addFlashAttribute("sucesso", "Item cadastrado com sucesso");
 		return new ModelAndView("redirect:item");
 	}
 	

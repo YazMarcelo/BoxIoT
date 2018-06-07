@@ -47,7 +47,7 @@ public class UsuarioController {
 		if (bindingResult.hasErrors()) {
 			return form(usuario);
 		}
-		System.out.println("salvar produto...");
+		System.out.println("salvar usuario...");
 		usuarioDAO.save(usuario);
 		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
 		return new ModelAndView("redirect:usuario");
