@@ -47,7 +47,7 @@ public class LocalController {
 		System.out.println("salvar local...");
 		localDAO.save(local);
 		redirectAttributes.addFlashAttribute("sucesso", "Local cadastrado com sucesso");
-		return new ModelAndView("redirect:item");
+		return new ModelAndView("redirect:local");
 	}
 	
 //	@RequestMapping("/update/{id}")
