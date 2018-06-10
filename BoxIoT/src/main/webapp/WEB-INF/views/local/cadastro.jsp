@@ -17,11 +17,15 @@
                     <div class="card-body">
                     	<form:form method="post" action="/BoxIoT/local" commandName="local">
                             <input type="hidden" name="id_controle" value="" />
+                            <h5><b>Campos Obrigatórios</b><b style="color:#ff0000">*</b></h5>
+
+
+                    		<!--Campos-->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                         <label class="bmd-label-floating" for="nome">Descrição</label>
-                                         <form:input path="descricao" class="form-control"/>
+                                         <label class="bmd-label-floating" for="nome">Descrição<b style="color:#ff0000">*</b></label>
+                                         <form:input required="required" path="descricao" class="form-control"/>
 										 <form:errors path="descricao" />
                                     </div>
                                 </div>
@@ -30,7 +34,7 @@
                             <button type="submit" id="btn-salvar" class="btn btn-primary pull-right">Salvar</button>
                             <button type="submit" hidden id="btn-submit" class="btn btn-primary pull-right">Salvar</button>
                             <div class="clearfix"></div>
-                        	</form:form>
+                        </form:form>
                     </div>
                 </div>
             </div>

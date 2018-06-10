@@ -16,12 +16,16 @@
                     </div>
                     <div class="card-body">
                     	<form:form method="post" action="/BoxIoT/usuario" commandName="usuario">
+                    	<h5><b>Campos Obrigatórios</b><b style="color:#ff0000">*</b></h5>
+
+
+                    		<!--Campos-->
                             <input type="hidden" name="id_controle" value="" />
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                         <label class="bmd-label-floating" for="nome">Nome</label>
-                                         <form:input path="nome" class="form-control"/>
+                                         <label class="bmd-label-floating" for="nome">Nome<b style="color:#ff0000">*</b></label>
+                                         <form:input required="required" path="nome" class="form-control"/>
 										 <form:errors path="nome" />
                                     </div>
                                 </div>
@@ -29,8 +33,8 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                         <label class="bmd-label-floating" for="email">Email</label>
-                                         <form:input type="email" path="email" class="form-control"/>
+                                         <label class="bmd-label-floating" for="email">Email<b style="color:#ff0000">*</b></label>
+                                         <form:input required="required" type="email" path="email" class="form-control"/>
 										 <form:errors path="email" />
                                     </div>
                                 </div>
@@ -38,15 +42,15 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                         <label class="bmd-label-floating" for="senha">Senha</label>
-                                         <form:input type="password" id="senha" name="senha" path="senha" class="form-control"/>
+                                         <label class="bmd-label-floating" for="senha">Senha<b style="color:#ff0000">*</b></label>
+                                         <form:input required="required" type="password" id="senha" name="senha" path="senha" class="form-control"/>
 										 <form:errors path="senha" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label class="bmd-label-floating">Confirmar Senha</label>
-                                        <input type="password" id="confirm-senha" name="confirm-senha" class="form-control" required>
+                                        <label class="bmd-label-floating">Confirmar Senha<b style="color:#ff0000">*</b></label>
+                                        <input required type="password" id="confirm-senha" name="confirm-senha" class="form-control" required>
                                     </div>
                                 </div>
                             </div>

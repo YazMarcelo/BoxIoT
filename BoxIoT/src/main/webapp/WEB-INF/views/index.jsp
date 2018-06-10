@@ -7,7 +7,7 @@
     width: 135px;
 }
 
-i.fa.fa-lightbulb-o{
+i.icone-item{
     margin-top: 20px !important;
     font-size: 90px !important;
 }
@@ -28,7 +28,7 @@ text-align: center;
                                         <i class="material-icons">content_copy</i>
                                     </div>-->
                                     <p class="card-category"></p>
-                                    <h3 class="card-title"><i class="fa fa-lightbulb-o"></i>
+                                    <h3 class="card-title"><i class="fa fa-lightbulb-o icone-item"></i>
                                         <!-- <small>GB</small> -->
                                     </h3>
                                 </div>
@@ -48,7 +48,7 @@ text-align: center;
                                         <i class="material-icons">content_copy</i>
                                     </div>-->
                                     <p class="card-category"></p>
-                                    <h3 class="card-title"><i class="fa fa-lightbulb-o"></i>
+                                    <h3 class="card-title"><i class="fa fa-lightbulb-o icone-item"></i>
                                         <!-- <small>GB</small> -->
                                     </h3>
                                 </div>

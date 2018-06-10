@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/local">
                             <i class="fa fa-home"></i>
                             <p>Local</p>
                         </a>
@@ -144,5 +144,6 @@
     <script src="${pageContext.request.contextPath}/resources/template/vendor/nanoscroller/nanoscroller.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
 </body>
 </html>
