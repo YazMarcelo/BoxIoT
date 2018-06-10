@@ -26,6 +26,7 @@
                                 <thead class=" text-primary">
                                     <tr>
                                         <th>Descrição</th>
+                                        <th>Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
