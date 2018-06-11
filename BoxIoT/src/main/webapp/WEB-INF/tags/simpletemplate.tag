@@ -6,7 +6,7 @@
      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
      <link href="${pageContext.request.contextPath}/resources/template/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
      <link href="${pageContext.request.contextPath}/resources/template/vendor/font-awesome/css/font-awesome.css" rel="stylesheet" />
-     <link href="${pageContext.request.contextPath}/resources/template2/assets/css/material-dashboard.css" rel="stylesheet">
+     <link href="${pageContext.request.contextPath}/resources/template2/assets/css/material-dashboard.min.css" rel="stylesheet">
     
     <!-- Documentation extras -->
     <!-- CSS Just for demo purpose, don't include it in your project -->
@@ -144,6 +144,7 @@
     <script src="${pageContext.request.contextPath}/resources/template/vendor/nanoscroller/nanoscroller.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
     <script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
 </body>
 </html>
