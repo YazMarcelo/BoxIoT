@@ -24,6 +24,18 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                         <label class="bmd-label-floating" for="nome">Local<b style="color:#ff0000">*</b></label>
+                                         <select class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
+                            <option disabled selected>Choose city</option>
+                            <option value="2">Foobar</option>
+                            <option value="3">Is great</option>
+                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Descrição<b style="color:#ff0000">*</b></label>
                                          <form:input required="required" path="descricao" class="form-control"/>
 										 <form:errors path="descricao" />
