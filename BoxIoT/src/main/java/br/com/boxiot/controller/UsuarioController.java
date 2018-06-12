@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.boxiot.dao.UsuarioDAO;
 import br.com.boxiot.dao.ProdutoDAO;
+import br.com.boxiot.model.Item;
 import br.com.boxiot.model.Usuario;
 import br.com.boxiot.validation.ProdutoValidator;
 
@@ -59,6 +61,13 @@ public class UsuarioController {
 		modelAndView.addObject("usuarios", usuarioDAO.list());
 		return modelAndView;
 	}
+	
+	@RequestMapping("/alteracao/{id}")
+	public ModelAndView alterar(@PathVariable("id") int id, Usuario usuario){
+	ModelAndView modelAndView = new ModelAndView("usuario/alteracao");
+	modelAndView.addObject("usuario", usuarioDAO.obterUsuario(id));
+	return modelAndView;
+}
 	
 	/*@RequestMapping("/alteracao/{id}")
 	public ModelAndView alterar(@RequestParam(value="id") int id,Usuario usuario) {

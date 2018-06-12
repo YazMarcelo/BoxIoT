@@ -75,6 +75,13 @@ public class ItemController {
 	return modelAndView;
 }
 	
+	@RequestMapping("/excluir/{id}")
+	public ModelAndView excluir(@PathVariable("id") int id, Item item){
+		System.out.println("excluir item...");
+		itemDAO.delete(id);
+		return new ModelAndView("redirect:item");
+}
+	
 //	public ModelAndView alterar(Item item) {
 //		ModelAndView modelAndView = new ModelAndView("item/alteracao");
 //		return modelAndView;
