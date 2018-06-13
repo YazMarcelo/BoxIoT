@@ -25,6 +25,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Local<b style="color:#ff0000">*</b></label>
+                                         <br>
                                          <select class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
                             <option disabled selected>Choose city</option>
                             <option value="2">Foobar</option>
