@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import br.com.boxiot.model.Item;
+import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
 
 @Repository
@@ -36,10 +37,8 @@ public class ItemDAO {
 				.getSingleResult();
 	}
 	
-	public void delete(int id) {
-		manager
-		.createQuery("update Item i set excluido = true where i.id = "+id+"", Item.class)
-		.getSingleResult();
+	public void delete(Item item) {
+		manager.remove(item);
 	}
 
 }

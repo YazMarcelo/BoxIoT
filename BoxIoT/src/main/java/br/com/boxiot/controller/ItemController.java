@@ -15,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.boxiot.dao.ItemDAO;
 import br.com.boxiot.model.Item;
+import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
 
 @Controller
@@ -76,11 +77,13 @@ public class ItemController {
 }
 	
 	@RequestMapping("/excluir/{id}")
-	public ModelAndView excluir(@PathVariable("id") int id, Item item){
-		System.out.println("excluir item...");
-		itemDAO.delete(id);
-		return new ModelAndView("redirect:item");
-}
+	public ModelAndView excluir(@PathVariable("id") int id){
+		System.out.println("excluir local...");
+		Item item = itemDAO.obterItem(id);
+		item.setExcluido(true);
+		itemDAO.save(item);
+		return list();
+	}
 	
 //	public ModelAndView alterar(Item item) {
 //		ModelAndView modelAndView = new ModelAndView("item/alteracao");
