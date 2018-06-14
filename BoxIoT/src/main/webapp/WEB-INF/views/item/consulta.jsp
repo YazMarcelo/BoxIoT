@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body">
                     	<div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-striped">
                                 <thead class=" text-primary">
                                     <tr>
                                         <th>Descrição</th>
@@ -39,7 +39,7 @@
                                             	<a href="${pageContext.request.contextPath}/item/alteracao/${item.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a href="/item/excluir/${item.id}">
+                                                <a href="${pageContext.request.contextPath}/item/excluir/${item.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>
