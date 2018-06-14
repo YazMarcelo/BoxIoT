@@ -78,11 +78,11 @@ public class ItemController {
 	
 	@RequestMapping("/excluir/{id}")
 	public ModelAndView excluir(@PathVariable("id") int id){
-		System.out.println("excluir local...");
+		System.out.println("excluir item...");
 		Item item = itemDAO.obterItem(id);
 		item.setExcluido(true);
 		itemDAO.save(item);
-		return new ModelAndView("redirect:/local");
+		return new ModelAndView("redirect:/item");
 	}
 	
 //	public ModelAndView alterar(Item item) {
