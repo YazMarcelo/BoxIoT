@@ -21,6 +21,16 @@ public class Local{
 	@Column(name="loca_descricao")
 	private	String descricao;
 	
+	@Column(name="excluido")
+	private Boolean excluido = false;
+
+	public Boolean getExcluido() {
+		return excluido;
+	}
+
+	public void setExcluido(Boolean excluido) {
+		this.excluido = excluido;
+	}
 
 	public Integer getId() {
 		return id;

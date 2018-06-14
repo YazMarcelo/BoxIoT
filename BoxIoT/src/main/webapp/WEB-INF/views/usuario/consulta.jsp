@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body">
                     	<div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-striped">
                                 <thead class=" text-primary">
                                     <tr>
                                         <th>Nome</th>
@@ -39,7 +39,7 @@
                                             	<a href="/usuario/alteracao/${usuario.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a href="/usuario/excluir/${usuario.id}">
+                                                <a class="remove-line" href="/usuario/excluir/${usuario.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>

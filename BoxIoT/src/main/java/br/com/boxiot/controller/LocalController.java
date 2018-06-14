@@ -76,6 +76,14 @@ public class LocalController {
 	modelAndView.addObject("local", localDAO.obterLocal(id));
 	return modelAndView;
 }
+	@RequestMapping("/excluir/{id}")
+	public ModelAndView excluir(@PathVariable("id") int id){
+		System.out.println("excluir local...");
+		Local local = localDAO.obterLocal(id);
+		local.setExcluido(true);
+		localDAO.save(local);
+		return list();
+	}
 	
 //	public ModelAndView alterar(Item item) {
 //		ModelAndView modelAndView = new ModelAndView("item/alteracao");

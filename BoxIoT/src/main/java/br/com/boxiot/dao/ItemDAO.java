@@ -38,7 +38,7 @@ public class ItemDAO {
 	
 	public void delete(int id) {
 		manager
-		.createQuery("update Item i set excluido = true where i.id = "+id+" and excluido = false", Item.class)
+		.createQuery("update Item i set excluido = true where i.id = "+id+"", Item.class)
 		.getSingleResult();
 	}
 

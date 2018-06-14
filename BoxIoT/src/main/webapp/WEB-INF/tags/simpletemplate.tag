@@ -150,6 +150,7 @@ width:300px !important;
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
     <script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
 </body>
 </html>

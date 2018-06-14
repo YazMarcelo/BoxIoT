@@ -27,20 +27,18 @@ public class LocalDAO {
 
 	public List<Local> list() {
 		return manager
-				.createQuery("select distinct(l) from Local l", Local.class)
+				.createQuery("select distinct(l) from Local l where l.excluido = false", Local.class)
 				.getResultList();
 	}
 
 	public Local obterLocal(int id) {
 		return manager
-				.createQuery("select distinct(l) from Local l where l.id = "+id+" and excluido = false", Local.class)
+				.createQuery("select distinct(l) from Local l where l.id = "+id+" and l.excluido = false", Local.class)
 				.getSingleResult();
 	}
 	
-	public void delete(int id) {
-		manager
-		.createQuery("update Local l set excluido = true where l.id = "+id+" and excluido = false", Local.class)
-		.getSingleResult();
+	public void delete(Local local) {
+		manager.remove(local);
 	}
 
 }
