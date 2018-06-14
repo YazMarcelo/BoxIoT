@@ -82,7 +82,7 @@ public class ItemController {
 		Item item = itemDAO.obterItem(id);
 		item.setExcluido(true);
 		itemDAO.save(item);
-		return list();
+		return new ModelAndView("redirect:/local");
 	}
 	
 //	public ModelAndView alterar(Item item) {
