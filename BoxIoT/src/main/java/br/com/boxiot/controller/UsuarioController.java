@@ -18,6 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import br.com.boxiot.dao.UsuarioDAO;
 import br.com.boxiot.dao.ProdutoDAO;
 import br.com.boxiot.model.Item;
+import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
 import br.com.boxiot.validation.ProdutoValidator;
 
@@ -68,6 +69,15 @@ public class UsuarioController {
 	modelAndView.addObject("usuario", usuarioDAO.obterUsuario(id));
 	return modelAndView;
 }
+	
+	@RequestMapping("/excluir/{id}")
+	public ModelAndView excluir(@PathVariable("id") int id){
+		System.out.println("excluir usuario...");
+		Usuario usuario = usuarioDAO.obterUsuario(id);
+		usuario.setExcluido(true);
+		usuarioDAO.save(usuario);
+		return new ModelAndView("redirect:/usuario");
+	}
 	
 	/*@RequestMapping("/alteracao/{id}")
 	public ModelAndView alterar(@RequestParam(value="id") int id,Usuario usuario) {

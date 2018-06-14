@@ -7,6 +7,7 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
+import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
 
 @Repository
@@ -29,6 +30,10 @@ public class UsuarioDAO {
 		return manager
 				.createQuery("select distinct(u) from Usuario u where u.id = "+id, Usuario.class)
 				.getSingleResult();
+	}
+	
+	public void delete(Usuario usuario) {
+		manager.remove(usuario);
 	}
 
 }

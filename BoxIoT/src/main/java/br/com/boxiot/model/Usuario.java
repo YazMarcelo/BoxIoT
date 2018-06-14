@@ -30,6 +30,17 @@ public class Usuario{
 
 	@Column(name="usua_senha")
 	private	String senha;
+	
+	@Column(name="excluido")
+	private Boolean excluido = false;
+
+	public Boolean getExcluido() {
+		return excluido;
+	}
+
+	public void setExcluido(Boolean excluido) {
+		this.excluido = excluido;
+	}
 
 	public Integer getId() {
 		return id;
