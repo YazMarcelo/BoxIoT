@@ -39,7 +39,7 @@
                                             	<a href="${pageContext.request.contextPath}/item/alteracao/${item.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a href="${pageContext.request.contextPath}/item/excluir/${item.id}">
+                                                <a class="remove-line" href="${pageContext.request.contextPath}/item/excluir/${item.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>
