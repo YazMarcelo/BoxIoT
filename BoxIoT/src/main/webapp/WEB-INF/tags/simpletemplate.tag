@@ -1,6 +1,7 @@
 <%@ tag language="java" pageEncoding="ISO-8859-1"%>
 <%@ attribute name="title" required="true" rtexprvalue="true" %>
 <%@ attribute name="content" fragment="true"%>
+<%@ attribute name="navbar" fragment="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -28,6 +29,9 @@
 .btn-group.bootstrap-select{
 width:300px !important;
 }
+a.simple-text.logo-normal{
+text-align:center !important;
+}
 </style>
 </head>
 <body>
@@ -52,12 +56,6 @@ width:300px !important;
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
-                            <i class="fa fa-user"></i>
-                            <p>Usuário</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
                         <a class="nav-link" href="${pageContext.request.contextPath}/item">
                             <i class="fa fa-lightbulb-o"></i>
                             <p>Item</p>
@@ -71,16 +69,22 @@ width:300px !important;
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
+                            <i class="fa fa-user"></i>
+                            <p>Usuário</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
                             <i class="fa fa-unlock-alt"></i>
-                            <p>Modo</p>
+                            <p>Permissão</p>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="main-panel">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
+        
+        <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-wrapper">
                         <a class="navbar-brand" href="">Box IOT</a>
@@ -91,23 +95,9 @@ width:300px !important;
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <form class="navbar-form">
-                            <div class="input-group no-border">
-                                <input type="text" value="" class="form-control" placeholder="Search..."/>
-                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                                    <i class="material-icons">search</i>
-                                    <div class="ripple-container"></div>
-                                </button>
-                            </div>
-                        </form>
-                        <ul class="navbar-nav">
-                            
-                        </ul>
-                    </div>
+<jsp:invoke fragment="navbar"></jsp:invoke>
                 </div>
             </nav>
-            <!-- End Navbar -->
             
 	<jsp:invoke fragment="content"></jsp:invoke>
 	
