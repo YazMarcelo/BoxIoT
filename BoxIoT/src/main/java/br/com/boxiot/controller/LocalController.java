@@ -82,7 +82,7 @@ public class LocalController {
 		Local local = localDAO.obterLocal(id);
 		local.setExcluido(true);
 		localDAO.save(local);
-		return list();
+		return new ModelAndView("redirect:/local");
 	}
 	
 //	public ModelAndView alterar(Item item) {
