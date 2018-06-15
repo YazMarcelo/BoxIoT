@@ -21,7 +21,7 @@
 
                     		<!--Campos-->
                             <input type="hidden" name="id_controle" value="" />
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Local<b style="color:#ff0000">*</b></label>
@@ -33,7 +33,7 @@
                           </select>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">

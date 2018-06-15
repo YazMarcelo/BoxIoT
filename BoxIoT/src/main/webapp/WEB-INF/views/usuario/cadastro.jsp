@@ -25,7 +25,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Nome<b style="color:#ff0000">*</b></label>
-                                         <form:input required="required" path="nome" class="form-control"/>
+                                         <form:input required="required" path="nome" class="form-control" maxlength="100"/>
 										 <form:errors path="nome" />
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="email">Email<b style="color:#ff0000">*</b></label>
-                                         <form:input required="required" type="email" path="email" class="form-control"/>
+                                         <form:input required="required" type="email" path="email" class="form-control" maxlength="40"/>
 										 <form:errors path="email" />
                                     </div>
                                 </div>
@@ -43,14 +43,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="senha">Senha<b style="color:#ff0000">*</b></label>
-                                         <form:input required="required" type="password" id="senha" name="senha" path="senha" class="form-control"/>
+                                         <form:input required="required" type="password" id="senha" name="senha" path="senha" class="form-control" maxlength="8"/>
 										 <form:errors path="senha" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Confirmar Senha<b style="color:#ff0000">*</b></label>
-                                        <input required type="password" id="confirm-senha" name="confirm-senha" class="form-control" required>
+                                        <input required type="password" id="confirm-senha" name="confirm-senha" class="form-control" required maxlength="8">
                                     </div>
                                 </div>
                             </div>
