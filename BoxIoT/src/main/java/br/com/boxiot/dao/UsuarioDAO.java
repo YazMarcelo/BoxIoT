@@ -22,7 +22,7 @@ public class UsuarioDAO {
 
 	public List<Usuario> list() {
 		return manager
-				.createQuery("select distinct(u) from Usuario u", Usuario.class)
+				.createQuery("select distinct(u) from Usuario u where u.excluido = false", Usuario.class)
 				.getResultList();
 	}
 

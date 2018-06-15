@@ -33,7 +33,7 @@ public class ItemDAO {
 
 	public Item obterItem(int id) {
 		return manager
-				.createQuery("select distinct(i) from Item i where i.id = "+id+" and excluido = false", Item.class)
+				.createQuery("select distinct(i) from Item i where i.id = "+id+" and i.excluido = false", Item.class)
 				.getSingleResult();
 	}
 	

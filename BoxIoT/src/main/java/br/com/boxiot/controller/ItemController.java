@@ -78,7 +78,7 @@ public class ItemController {
 	
 	@RequestMapping("/excluir/{id}")
 	public ModelAndView excluir(@PathVariable("id") int id){
-		System.out.println("excluir item...");
+		System.out.println("excluir local...");
 		Item item = itemDAO.obterItem(id);
 		item.setExcluido(true);
 		itemDAO.save(item);
