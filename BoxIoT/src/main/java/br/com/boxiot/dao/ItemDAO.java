@@ -27,7 +27,7 @@ public class ItemDAO {
 
 	public List<Item> list() {
 		return manager
-				.createQuery("select distinct(i) from Item i", Item.class)
+				.createQuery("select distinct(i) from Item i where i.excluido = false", Item.class)
 				.getResultList();
 	}
 

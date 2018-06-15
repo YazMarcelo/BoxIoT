@@ -17,7 +17,11 @@ public class UsuarioDAO {
 	private EntityManager manager;
 
 	public void save(Usuario usuario) {
-		manager.persist(usuario);
+		if(usuario.getId() != null) {
+			manager.merge(usuario);
+		} else {
+			manager.persist(usuario);	
+		}
 	}
 
 	public List<Usuario> list() {
