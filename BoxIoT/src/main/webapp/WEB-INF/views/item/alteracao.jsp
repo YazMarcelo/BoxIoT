@@ -22,7 +22,7 @@
                     		<!--Campos-->
                     	<form:input path="id" type="hidden" value="${item.id}"/>
                             <input type="hidden" name="id_controle" value="" />
-                            <!-- <div class="row">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Descrição<b style="color:#ff0000">*</b></label>
@@ -30,7 +30,7 @@
 										 <form:errors path="descricao" />
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
