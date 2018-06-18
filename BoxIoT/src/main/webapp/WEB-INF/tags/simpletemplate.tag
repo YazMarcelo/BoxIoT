@@ -100,6 +100,55 @@ text-align:center !important;
             </nav>
             
 	<jsp:invoke fragment="content"></jsp:invoke>
+	<!--    <button class="btn btn-rose btn-round" data-toggle="modal" data-target="#myModal10">
+                          Small alert modal
+                        <div class="ripple-container"></div></button>
+                        
+                                                <!-- small modal
+                        <div class="modal fade modal-mini modal-primary" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    		<div class="modal-dialog modal-small">
+                    			<div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="material-icons">clear</i></button>
+                            </div>
+                    				<div class="modal-body">
+                    					<p id="msg">Are you sure you want to do this?</p>
+                    				</div>
+                            <div class="modal-footer justify-content-center">
+                              <button type="button" class="btn btn-link" data-dismiss="modal">Never mind</button>
+                              <button type="button" class="btn btn-success btn-link">Yes<div class="ripple-container"></div></button>
+                            </div>
+                    			</div>
+                    		</div>
+                    	</div>
+                        end small modal -->
+                        
+                        <button id="modal-excluir" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal">
+                          Classic modal
+                        <div class="ripple-container"></div></button>
+                        
+                                                <!-- Classic Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Mensagem do sistema</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                      <i class="material-icons">clear</i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Deseja excluir esse registro?</p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="btn-deny" class="btn btn-link btn-success">Não</button>
+                                    <button type="button" id="btn-confirm" class="btn btn-link" data-dismiss="modal">Sim</button>
+                                </div>
+                            </div>
+                        </div>
+                    	</div>
+                    	<!--  End Modal -->
 	
             <footer class="footer ">
                 <div class="container-fluid">
