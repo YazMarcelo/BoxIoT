@@ -123,22 +123,21 @@ text-align:center !important;
                     	</div>
                         end small modal -->
                         
-                        <button id="modal-excluir" class="btn btn-primary btn-round" data-toggle="modal" data-target="#myModal">
-                          Classic modal
-                        <div class="ripple-container"></div></button>
+                        <button id="modal-question" style="display:none" class="" data-toggle="modal" data-target="#myModal">
+                        </button>
                         
                                                 <!-- Classic Modal -->
                         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                  <h4 class="modal-title">Mensagem do sistema</h4>
+                                 <!-- <h4 class="modal-title">Mensagem do sistema</h4> -->
                                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                       <i class="material-icons">clear</i>
                                   </button>
                                 </div>
                                 <div class="modal-body">
-                                    <p>Deseja excluir esse registro?</p>
+                                    <p id="question"></p>
 
                                 </div>
                                 <div class="modal-footer">
@@ -149,6 +148,56 @@ text-align:center !important;
                         </div>
                     	</div>
                     	<!--  End Modal -->
+                    	
+                    	<button id="modal-notf" style="display:none" class="" data-toggle="modal" data-target="#myModalNotf">
+                        </button>
+                        
+                                                <!-- Success Modal -->
+                        <div class="modal fade" id="myModalNotf" tabindex="-1" role="dialog" aria-labelledby="myModalLabelNotf" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                 <h4 class="modal-title">Sucesso!</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                      <i class="material-icons">clear</i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="notf"></p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="btn-ok-sucess" class="btn btn-success" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    	</div>
+                    	<!--  End success Modal -->
+                    	
+                    	<button id="modal-notf-error" style="display:none" class="" data-toggle="modal" data-target="#myModalNotfError">
+                        </button>
+                        
+                                                <!-- Error Modal -->
+                        <div class="modal fade" id="myModalNotfError" tabindex="-1" role="dialog" aria-labelledby="myModalLabelNotfError" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                 <h4 class="modal-title">Ops, algo deu errado!</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                      <i class="material-icons">clear</i>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p id="notf-error"></p>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="btn-ok-error" class="btn btn-danger" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
+                    	</div>
+                    	<!--  End Error Modal -->
 	
             <footer class="footer ">
                 <div class="container-fluid">
@@ -159,6 +208,7 @@ text-align:center !important;
     </div>
     
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery/jquery.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/core/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/core/popper.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/bootstrap-material-design.js"></script>
@@ -189,7 +239,6 @@ text-align:center !important;
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
     <script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
 </body>
 </html>

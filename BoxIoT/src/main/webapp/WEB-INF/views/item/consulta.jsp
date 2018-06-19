@@ -54,5 +54,11 @@
         </div>
     </div>
 </div>
+<script>
+if((""+${msg}) != ""){
+	$("#notf").html((""+${msg}));
+	$("#modal-notf").click();
+}
+</script>
 	</jsp:attribute>
 </mt:simpletemplate>

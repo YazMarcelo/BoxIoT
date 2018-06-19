@@ -1,5 +1,7 @@
 package br.com.boxiot.controller;
 
+import java.util.ArrayList;
+
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
@@ -25,6 +27,8 @@ public class ItemController {
 
 	@Autowired
 	private ItemDAO itemDAO;
+	
+	private String lstMsgSucesso;
 
 	/*@InitBinder*/
 	/*protected void initBinder(WebDataBinder binder) {
@@ -45,7 +49,7 @@ public class ItemController {
 		}
 		System.out.println("salvar item...");
 		itemDAO.save(item);
-		redirectAttributes.addFlashAttribute("sucesso", "Item cadastrado com sucesso");
+		redirectAttributes.addFlashAttribute("msg", "Cadastro efetuado com sucesso!");
 		return new ModelAndView("redirect:item");
 	}
 	
@@ -82,7 +86,6 @@ public class ItemController {
 		Item item = itemDAO.obterItem(id);
 		item.setExcluido(true);
 		itemDAO.save(item);
-//		return new ModelAndView("redirect:/item");
 	}
 	
 //	public ModelAndView alterar(Item item) {

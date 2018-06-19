@@ -1,15 +1,17 @@
 ﻿$(document).ready(function(){
 	$(".remove-line").click(function(){
 		var linha = $(this);
-		$("#modal-excluir").click();
-		$("#btn-confirm-question").click(function (){
+		$("#modal-question").click();
+		$("#question").html("Confirmar Exclusão?");
+		$("#btn-confirm").click(function (){
 		    $.ajax({
 		        url: $(linha).attr("data-href"),
 		        type: "POST",
 		        async: false,
 		        complete: function (resultado) {
 					excluirLinha($(linha));
-		            alert("complete");
+					$("#notf").html("Exclusão efetuada com sucesso!");
+					$("#modal-notf").click();
 		        }
 		    });
 		});
