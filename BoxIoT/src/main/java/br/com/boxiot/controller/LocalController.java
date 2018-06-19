@@ -44,9 +44,16 @@ public class LocalController {
 		if (bindingResult.hasErrors()) {
 			return form(local);
 		}
-		System.out.println("salvar local...");
+		Boolean alteracao = false;
+		String msg = "";
+		
+		if(local.getId() != null && local.getId() > 0) {alteracao = true;}
+		
 		localDAO.save(local);
-		redirectAttributes.addFlashAttribute("sucesso", "Local cadastrado com sucesso");
+		
+		msg = alteracao ? "Alteração efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
+		
+		redirectAttributes.addFlashAttribute("msg", msg);
 		return new ModelAndView("redirect:local");
 	}
 	

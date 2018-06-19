@@ -7,6 +7,7 @@
 </style>
 <mt:simpletemplate title="Home Page">
 	<jsp:attribute name="content">
+	<label id="label-msg" hide style="display:none">${msg}</label>
 			<div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -54,5 +55,8 @@
         </div>
     </div>
 </div>
+	</jsp:attribute>
+	<jsp:attribute name="js_personalizado">
+	    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
 	</jsp:attribute>
 </mt:simpletemplate>

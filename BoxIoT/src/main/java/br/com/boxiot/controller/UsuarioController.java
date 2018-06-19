@@ -43,6 +43,12 @@ public class UsuarioController {
 		ModelAndView modelAndView = new ModelAndView("usuario/cadastro");
 		return modelAndView;
 	}
+	
+	@RequestMapping("/login")
+	public ModelAndView login() {
+		ModelAndView modelAndView = new ModelAndView("usuario/login");
+		return modelAndView;
+	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView save(@Valid Usuario usuario, BindingResult bindingResult,
@@ -50,9 +56,16 @@ public class UsuarioController {
 		if (bindingResult.hasErrors()) {
 			return form(usuario);
 		}
-		System.out.println("salvar usuario...");
+		Boolean alteracao = false;
+		String msg = "";
+		
+		if(usuario.getId() != null && usuario.getId() > 0) {alteracao = true;}
+		
 		usuarioDAO.save(usuario);
-		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
+		
+		msg = alteracao ? "Alteração efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
+		
+		redirectAttributes.addFlashAttribute("msg", msg);
 		return new ModelAndView("redirect:usuario");
 	}
 

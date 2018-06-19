@@ -2,6 +2,7 @@
 <%@ attribute name="title" required="true" rtexprvalue="true" %>
 <%@ attribute name="content" fragment="true"%>
 <%@ attribute name="navbar" fragment="true" %>
+<%@ attribute name="js_personalizado" fragment="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -65,6 +66,12 @@ text-align:center !important;
                         <a class="nav-link" href="${pageContext.request.contextPath}/local">
                             <i class="fa fa-home"></i>
                             <p>Local</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/modo">
+                            <i class="fa fa-bell"></i>
+                            <p>Modo</p>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -208,7 +215,6 @@ text-align:center !important;
     </div>
     
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery/jquery.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/core/jquery.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/core/popper.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/bootstrap-material-design.js"></script>
@@ -239,6 +245,7 @@ text-align:center !important;
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
+    
+    <jsp:invoke fragment="js_personalizado"></jsp:invoke>
 </body>
 </html>

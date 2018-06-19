@@ -14,11 +14,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title">Consulta de Local</h4>
+                        <h4 class="card-title">Consulta de Modo</h4>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <a class="btn btn-primary pull-left" style="margin-left: 15px;" href="${pageContext.request.contextPath}/local/cadastro"><i class="fa fa-plus"></i> Novo Local</a>
+                            <a class="btn btn-primary pull-left" style="margin-left: 15px;" href="${pageContext.request.contextPath}/modo/cadastro"><i class="fa fa-plus"></i> Novo Modo</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -31,14 +31,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                	<c:forEach items="${locais}" var="local">
+                                	<c:forEach items="${modos}" var="modo">
 										<tr>
-											<td>${local.descricao}</td>
+											<td>${modo.descricao}</td>
 											<td style="width:100px;" class="center">
-                                            	<a href="${pageContext.request.contextPath}/local/alteracao/${local.id}" style="padding-right:20px;">
+                                            	<a href="${pageContext.request.contextPath}/local/alteracao/${modo.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a class="remove-line" href="#" data-href="${pageContext.request.contextPath}/local/excluir/${local.id}">
+                                                <a class="remove-line" href="#" data-href="${pageContext.request.contextPath}/local/excluir/${modo.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>

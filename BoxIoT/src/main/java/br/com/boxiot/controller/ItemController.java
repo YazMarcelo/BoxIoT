@@ -44,27 +44,23 @@ public class ItemController {
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView save(@Valid Item item, BindingResult bindingResult,
 			RedirectAttributes redirectAttributes) {
+		
+		Boolean alteracao = false;
+		String msg = "";
+		
 		if (bindingResult.hasErrors()) {
 			return form(item);
 		}
-		System.out.println("salvar item...");
+		
+		if(item.getId() != null && item.getId() > 0) {alteracao = true;}
+		
 		itemDAO.save(item);
-		redirectAttributes.addFlashAttribute("msg", "Cadastro efetuado com sucesso!");
+		
+		msg = alteracao ? "Alteração efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
+		redirectAttributes.addFlashAttribute("msg", msg);
 		return new ModelAndView("redirect:item");
 	}
 	
-//	@RequestMapping("/update/{id}")
-//	public ModelAndView update(@PathVariable("id") int id, @Valid Item item, BindingResult bindingResult,
-//			RedirectAttributes redirectAttributes) {
-//		if (bindingResult.hasErrors()) {
-//			return alterar(id,item);
-//		}
-//		System.out.println("update produto...");
-//		item.setId(id);
-//		itemDAO.save(item);
-//		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
-//		return new ModelAndView("item/consulta");
-//	}
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ModelAndView list() {

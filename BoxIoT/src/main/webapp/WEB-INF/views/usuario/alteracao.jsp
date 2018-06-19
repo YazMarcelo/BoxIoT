@@ -66,4 +66,7 @@
     </div>
 </div>
 	</jsp:attribute>
+	<jsp:attribute name="js_personalizado">
+		<script src="${pageContext.request.contextPath}/resources/scripts/usuario.js"></script>
+	</jsp:attribute>
 </mt:simpletemplate>

@@ -1,4 +1,9 @@
 ﻿$(document).ready(function(){
+	if(($("#label-msg").html()+"").trim() != ""){
+		$("#notf").html($("#label-msg").html());
+		$("#modal-notf").click();
+	}
+	
 	$(".remove-line").click(function(){
 		var linha = $(this);
 		$("#modal-question").click();
