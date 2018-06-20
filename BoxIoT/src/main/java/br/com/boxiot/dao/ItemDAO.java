@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import br.com.boxiot.model.Item;
 import br.com.boxiot.model.Local;
+import br.com.boxiot.model.Modo;
 import br.com.boxiot.model.Usuario;
 
 @Repository
@@ -23,6 +24,15 @@ public class ItemDAO {
 		} else {
 			manager.persist(item);	
 		}
+	}
+	
+	public void saveModo(Modo modo) {
+		if(modo.getId() != null) {
+			manager.merge(modo);
+		} else {
+			manager.persist(modo);	
+		}
+		
 	}
 
 	public List<Item> list() {
