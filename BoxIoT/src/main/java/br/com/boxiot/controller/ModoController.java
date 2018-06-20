@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import br.com.boxiot.dao.ItemDAO;
+import br.com.boxiot.dao.LocalDAO;
 import br.com.boxiot.dao.ModoDAO;
 import br.com.boxiot.model.Modo;
 
@@ -22,15 +24,18 @@ public class ModoController {
 
 	@Autowired
 	private ModoDAO modoDAO;
-
-	/*@InitBinder*/
-	/*protected void initBinder(WebDataBinder binder) {
-		binder.setValidator(new ProdutoValidator());
-	}*/
+	
+	@Autowired
+	private LocalDAO localDAO;
+	
+	@Autowired
+	private ItemDAO itemDAO;
 
 	@RequestMapping("/cadastro")
 	public ModelAndView form(Modo modo) {
 		ModelAndView modelAndView = new ModelAndView("modo/cadastro");
+		modelAndView.addObject("locais", localDAO.list());
+		modelAndView.addObject("itens", itemDAO.list());
 		return modelAndView;
 	}
 

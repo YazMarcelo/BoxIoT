@@ -27,6 +27,9 @@ public class Item{
 	@Column(name="item_saida")
 	private	int saida;
 	
+	@Column(name="item_local_id")
+	private	int idLocal;
+	
 	@Column(name="excluido")
 	private Boolean excluido = false;
 
@@ -36,6 +39,14 @@ public class Item{
 
 	public void setExcluido(Boolean excluido) {
 		this.excluido = excluido;
+	}
+
+	public int getIdLocal() {
+		return idLocal;
+	}
+
+	public void setIdLocal(int idLocal) {
+		this.idLocal = idLocal;
 	}
 
 	public Integer getId() {

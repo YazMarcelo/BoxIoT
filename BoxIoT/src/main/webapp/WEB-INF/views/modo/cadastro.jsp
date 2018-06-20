@@ -30,6 +30,37 @@
                                     </div>
                                 </div>
                             </div>
+                            <h5><b>Acontecimentos</b></h5>
+                            
+                           <!--Campos-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                    <c:forEach items="${locais}" var="local">
+                                         <div class="card-collapse">
+                						 	<div class="card-header" role="tab" id="headingOne">
+                  								<h5 class="mb-0">
+                    								<a data-toggle="collapse" href="#collapse-${local.id}" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                      									${local.descricao}
+                      									<i class="material-icons">keyboard_arrow_down</i>
+                    								</a>
+                  								</h5>
+                							</div>
+											
+											<c:forEach items="${itens}" var="item">
+												<c:if test = "${item.idLocal == local.id}">
+      										       <div id="collapse-${local.id}" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
+                  									<div class="card-body">
+                    									Nome Item: ${item.descricao}
+                  									</div>
+                								</div>
+      											</c:if>
+											</c:forEach>
+              							</div>
+                                    </c:forEach>
+                                    </div>
+                                </div>
+                            </div>
 
                             <button type="submit" id="btn-salvar" class="btn btn-primary pull-right">Salvar</button>
                             <button type="submit" hidden id="btn-submit" class="btn btn-primary pull-right">Salvar</button>
