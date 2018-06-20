@@ -3,6 +3,9 @@ package br.com.boxiot.controller;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -40,21 +43,15 @@ public class ModoController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView save(@Valid Modo modo, BindingResult bindingResult,
-			RedirectAttributes redirectAttributes) {
-		if (bindingResult.hasErrors()) {
-			return form(modo);
-		}
-		Boolean alteracao = false;
-		String msg = "";
+	public ModelAndView save(String json) throws JSONException {
+		JSONObject obj = new JSONObject(json);
+		JSONArray itens = obj.getJSONArray("itens");
 		
-		if(modo.getId() != null && modo.getId() > 0) {alteracao = true;}
-		
-		modoDAO.save(modo);
-		
-		msg = alteracao ? "Alteração efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
-		
-		redirectAttributes.addFlashAttribute("msg", msg);
+		int n = itens.length();
+	    for (int i = 0; i < n; ++i) {
+	    	JSONObject item = itens.getJSONObject(i);
+	    	int id = item.getInt("id");
+	    }
 		return new ModelAndView("redirect:modo");
 	}
 	

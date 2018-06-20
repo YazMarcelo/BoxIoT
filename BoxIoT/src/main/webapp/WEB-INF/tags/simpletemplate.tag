@@ -19,6 +19,17 @@
     <link href="${pageContext.request.contextPath}/resources/template/vendor/select2/css/select2.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/template/vendor/select2-bootstrap-theme/select2-bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/template/vendor/pnotify/pnotify.custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/template/vendor/jquery-ui/jquery-ui.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/template/vendor/jquery-ui/jquery-ui.theme.css" />
+	
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/template/css/sliders.css" />
+	
+	<style>
+	.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min{
+	background: #942bae;
+	}
+	</style>
     
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -245,6 +256,8 @@ text-align:center !important;
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-ui/jquery-ui.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/template/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
     
     <jsp:invoke fragment="js_personalizado"></jsp:invoke>
 </body>

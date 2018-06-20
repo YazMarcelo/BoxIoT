@@ -15,7 +15,7 @@
                         <h4 class="card-title">Cadastrar Modo</h4>
                     </div>
                     <div class="card-body">
-                    	<form:form method="post" action="/BoxIoT/modo" commandName="modo">
+                    	<form action="#">
                             <input type="hidden" name="id_controle" value="" />
                             <h5><b>Campos Obrigatórios</b><b style="color:#ff0000">*</b></h5>
 
@@ -25,8 +25,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Descrição<b style="color:#ff0000">*</b></label>
-                                         <form:input required="required" path="descricao" class="form-control"/>
-										 <form:errors path="descricao" />
+                                         <input id="descricao" name="descricao" class="form-control" required="required" type="text" value="">
                                     </div>
                                 </div>
                             </div>
@@ -46,31 +45,107 @@
                     								</a>
                   								</h5>
                 							</div>
-											
-											<c:forEach items="${itens}" var="item">
-												<c:if test = "${item.idLocal == local.id}">
-      										       <div id="collapse-${local.id}" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
-                  									<div class="card-body">
-                    									Nome Item: ${item.descricao}
+											<div id="collapse-${local.id}" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" style="">
+											<h5 style="margin-bottom: 5px;margin-top: 10px;"><b>Itens</b></h5>
+												<c:forEach items="${itens}" var="item"><c:if test = "${item.idLocal == local.id}">
+      										       <div class="card-body div-item">
+                    									<b>Nome Item:</b> ${item.descricao}
+                    									<input style="display:none;" name="id_item" class="id_controle_item" type="text" value="${item.id}">
+                    									<div class="col-sm-5 checkbox-radios">
+                                      						<div class="form-check">
+                                          						<label class="form-check-label">
+                                              						<input class="form-check-input on" type="radio" name="radio-${item.id}" value="true">
+                                              							<label>Ligado <b class="porcentagem">100</b>%</label>
+                                              						<span class="circle">
+                                                  						<span class="check"></span>
+                                              						</span>
+                                          						</label>
+                                          						<br>
+										  						<div class="slider-primary" data-plugin-slider data-plugin-options='{ "value": 100, "range": "min", "max": 100 }' data-plugin-slider-output="#slider-${item.id}">
+										  							<input id="slider-${item.id}" name="porcentagem" class="slider-item" type="hidden" value="100" />
+									      						</div>
+																
+                                      						</div>
+
+                                      						<div class="form-check">
+                                          						<label class="form-check-label">
+                                              						<input class="form-check-input off" type="radio" name="radio-${item.id}" value="false" checked>
+                                              							Desligado
+                                              								<span class="circle">
+                                                  								<span class="check"></span>
+                                              								</span>
+                                          						</label>
+                                      						</div>
+                                    					</div>
                   									</div>
-                								</div>
       											</c:if>
 											</c:forEach>
+											</div>
               							</div>
                                     </c:forEach>
                                     </div>
                                 </div>
                             </div>
-
-                            <button type="submit" id="btn-salvar" class="btn btn-primary pull-right">Salvar</button>
-                            <button type="submit" hidden id="btn-submit" class="btn btn-primary pull-right">Salvar</button>
+                            <button type="button" id="btn-salvar" class="btn btn-primary pull-right">Salvar</button>
                             <div class="clearfix"></div>
-                        </form:form>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+	</jsp:attribute>
+	<jsp:attribute name="js_personalizado">
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.js"></script>
+	<!-- Theme Initialization Files -->
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.init.js"></script>
+	    <script type="text/javascript">
+	    
+	    	$("#btn-salvar").click(function(){
+	    		$.ajax({
+			        url: "/BoxIoT/modo",
+			        data: 'json=' + JSON.stringify({"descricao": $("#descricao").val(), "itens":[getItens()]}),
+			        type: "POST",
+			        async: false,
+			        complete: function (resultado) {
+						excluirLinha($(linha));
+						$("#notf").html("Exclusão efetuada com sucesso!");
+						$("#modal-notf").click();
+			        }
+			    });
+	    	});
+	    	
+	    	//var jsonModo = JSON.stringify({"descricao": $("#descricao").val(), "itens":"["+itens+"]"});
+	    
+	    	$('.slider-item').change(function() {
+				$(this).parent().parent().find(".porcentagem").text( this.value );
+			});
+	    	
+	    	$(".slider-primary").hide();
+	    	$(".on").change(function(){
+	    		if($(this).prop('checked') == true){
+	    			$(this).parent().parent().find(".slider-primary").show(200);
+	    		}
+	    	});
+	    	$(".off").change(function(){
+	    		if($(this).prop('checked') == true){
+		    		$(this).parent().parent().parent().find(".slider-primary").hide(200);
+	    		}
+	    	});
+	    	
+	    	function getItens(){
+	    		var itens = '';
+	    		$(".div-item").each(function(e){
+	    			if($(this).find(".on").prop("checked") == true){
+	    				if(itens.length > 0){
+			    			itens += ',' 
+			    		}
+		    			itens += '{"id":"' + $(this).find(".id_controle_item").val() + '","porcentagem":"' + $(this).find(".porcentagem").html() + '"}';
+	    			}
+	    		});
+	    		return itens;
+	    	}
+		</script>
 	</jsp:attribute>
 </mt:simpletemplate>
