@@ -191,7 +191,7 @@ button:focus {
 
 input,
 button,
-select,
+selecte,
 optgroup,
 textarea {
   margin: 0;
@@ -204,7 +204,7 @@ input {
   overflow: visible; }
 
 button,
-select {
+selecte {
   text-transform: none; }
 
 button,
@@ -506,7 +506,7 @@ button:focus {
 
 input,
 button,
-select,
+selecte,
 optgroup,
 textarea {
   margin: 0;
@@ -519,7 +519,7 @@ input {
   overflow: visible; }
 
 button,
-select {
+selecte {
   text-transform: none; }
 
 button,
@@ -1898,10 +1898,10 @@ pre {
     background-color: #e9ecef;
     opacity: 1; }
 
-select.form-control:not([size]):not([multiple]) {
+selecte.form-control:not([size]):not([multiple]) {
   height: calc(2.4375rem + 2px); }
 
-select.form-control:focus::-ms-value {
+selecte.form-control:focus::-ms-value {
   color: #495057;
   background-color: transparent; }
 
@@ -1961,11 +1961,11 @@ select.form-control:focus::-ms-value {
   line-height: 1.5;
   border-radius: 0.2rem; }
 
-select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+selecte.form-control-sm:not([size]):not([multiple]), .input-group-sm > selecte.form-control:not([size]):not([multiple]),
+.input-group-sm > .input-group-prepend > selecte.input-group-text:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > selecte.input-group-text:not([size]):not([multiple]),
+.input-group-sm > .input-group-prepend > selecte.btn:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > selecte.btn:not([size]):not([multiple]) {
   height: calc(2.125rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control,
@@ -1978,11 +1978,11 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+selecte.form-control-lg:not([size]):not([multiple]), .input-group-lg > selecte.form-control:not([size]):not([multiple]),
+.input-group-lg > .input-group-prepend > selecte.input-group-text:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > selecte.input-group-text:not([size]):not([multiple]),
+.input-group-lg > .input-group-prepend > selecte.btn:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > selecte.btn:not([size]):not([multiple]) {
   height: calc(4.125rem + 2px); }
 
 .form-group {
@@ -2057,23 +2057,23 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: .2rem; }
 
 .was-validated .form-control:valid, .form-control.is-valid, .was-validated
-.custom-select:valid,
-.custom-select.is-valid {
+.custom-selecte:valid,
+.custom-selecte.is-valid {
   border-color: #4caf50; }
   .was-validated .form-control:valid:focus, .form-control.is-valid:focus, .was-validated
-  .custom-select:valid:focus,
-  .custom-select.is-valid:focus {
+  .custom-selecte:valid:focus,
+  .custom-selecte.is-valid:focus {
     border-color: #4caf50;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25); }
   .was-validated .form-control:valid ~ .valid-feedback,
   .was-validated .form-control:valid ~ .valid-tooltip, .form-control.is-valid ~ .valid-feedback,
   .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .custom-select:valid ~ .valid-feedback,
+  .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .custom-select:valid ~ .valid-tooltip,
-  .custom-select.is-valid ~ .valid-feedback,
-  .custom-select.is-valid ~ .valid-tooltip {
+  .custom-selecte:valid ~ .valid-tooltip,
+  .custom-selecte.is-valid ~ .valid-feedback,
+  .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
@@ -2137,23 +2137,23 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-radius: .2rem; }
 
 .was-validated .form-control:invalid, .form-control.is-invalid, .was-validated
-.custom-select:invalid,
-.custom-select.is-invalid {
+.custom-selecte:invalid,
+.custom-selecte.is-invalid {
   border-color: #f44336; }
   .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus, .was-validated
-  .custom-select:invalid:focus,
-  .custom-select.is-invalid:focus {
+  .custom-selecte:invalid:focus,
+  .custom-selecte.is-invalid:focus {
     border-color: #f44336;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25); }
   .was-validated .form-control:invalid ~ .invalid-feedback,
   .was-validated .form-control:invalid ~ .invalid-tooltip, .form-control.is-invalid ~ .invalid-feedback,
   .form-control.is-invalid ~ .invalid-tooltip, .was-validated
-  .custom-select:invalid ~ .invalid-feedback,
+  .custom-selecte:invalid ~ .invalid-feedback,
   .was-validated
-  .custom-select:invalid ~ .invalid-tooltip,
-  .custom-select.is-invalid ~ .invalid-feedback,
-  .custom-select.is-invalid ~ .invalid-tooltip {
+  .custom-selecte:invalid ~ .invalid-tooltip,
+  .custom-selecte.is-invalid ~ .invalid-feedback,
+  .custom-selecte.is-invalid ~ .invalid-tooltip {
     display: block; }
 
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
@@ -2276,10 +2276,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-selecte: none;
+     -moz-user-selecte: none;
+      -ms-user-selecte: none;
+          user-selecte: none;
   border: 1px solid transparent;
   padding: 0.46875rem 1rem;
   font-size: 1rem;
@@ -3075,7 +3075,7 @@ tbody.collapse.show {
           align-items: stretch;
   width: 100%; }
   .input-group > .form-control,
-  .input-group > .custom-select,
+  .input-group > .custom-selecte,
   .input-group > .custom-file {
     position: relative;
     -webkit-box-flex: 1;
@@ -3084,25 +3084,25 @@ tbody.collapse.show {
     width: 1%;
     margin-bottom: 0; }
     .input-group > .form-control:focus,
-    .input-group > .custom-select:focus,
+    .input-group > .custom-selecte:focus,
     .input-group > .custom-file:focus {
       z-index: 3; }
     .input-group > .form-control + .form-control,
-    .input-group > .form-control + .custom-select,
+    .input-group > .form-control + .custom-selecte,
     .input-group > .form-control + .custom-file,
-    .input-group > .custom-select + .form-control,
-    .input-group > .custom-select + .custom-select,
-    .input-group > .custom-select + .custom-file,
+    .input-group > .custom-selecte + .form-control,
+    .input-group > .custom-selecte + .custom-selecte,
+    .input-group > .custom-selecte + .custom-file,
     .input-group > .custom-file + .form-control,
-    .input-group > .custom-file + .custom-select,
+    .input-group > .custom-file + .custom-selecte,
     .input-group > .custom-file + .custom-file {
       margin-left: -1px; }
   .input-group > .form-control:not(:last-child),
-  .input-group > .custom-select:not(:last-child) {
+  .input-group > .custom-selecte:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
   .input-group > .form-control:not(:first-child),
-  .input-group > .custom-select:not(:first-child) {
+  .input-group > .custom-selecte:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
   .input-group > .custom-file {
@@ -3231,10 +3231,10 @@ tbody.collapse.show {
     height: 1rem;
     pointer-events: none;
     content: "";
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -webkit-user-selecte: none;
+       -moz-user-selecte: none;
+        -ms-user-selecte: none;
+            user-selecte: none;
     background-color: #dee2e6;
     -webkit-box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
             box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1); }
@@ -3285,7 +3285,7 @@ tbody.collapse.show {
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
   background-color: rgba(33, 150, 243, 0.5); }
 
-.custom-select {
+.custom-selecte {
   display: inline-block;
   width: 100%;
   height: calc(2.4375rem + 2px);
@@ -3300,31 +3300,31 @@ tbody.collapse.show {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
-  .custom-select:focus {
+  .custom-selecte:focus {
     border-color: #9acffa;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(154, 207, 250, 0.5);
             box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(154, 207, 250, 0.5); }
-    .custom-select:focus::-ms-value {
+    .custom-selecte:focus::-ms-value {
       color: #495057;
       background-color: transparent; }
-  .custom-select[multiple], .custom-select[size]:not([size="1"]) {
+  .custom-selecte[multiple], .custom-selecte[size]:not([size="1"]) {
     height: auto;
     padding-right: 0.75rem;
     background-image: none; }
-  .custom-select:disabled {
+  .custom-selecte:disabled {
     color: #6c757d;
     background-color: #e9ecef; }
-  .custom-select::-ms-expand {
+  .custom-selecte::-ms-expand {
     opacity: 0; }
 
-.custom-select-sm {
+.custom-selecte-sm {
   height: calc(2.125rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 75%; }
 
-.custom-select-lg {
+.custom-selecte-lg {
   height: calc(4.125rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
@@ -9768,23 +9768,23 @@ fieldset[disabled][disabled] .form-control, .form-control.disabled, .form-contro
   border-radius: .2rem; }
 
 .was-validated .is-focused .form-control:valid, .is-focused .form-control.is-valid, .was-validated
-.is-focused .custom-select:valid,
-.is-focused .custom-select.is-valid {
+.is-focused .custom-selecte:valid,
+.is-focused .custom-selecte.is-valid {
   border-color: #999999; }
   .was-validated .is-focused .form-control:valid:focus, .is-focused .form-control.is-valid:focus, .was-validated
-  .is-focused .custom-select:valid:focus,
-  .is-focused .custom-select.is-valid:focus {
+  .is-focused .custom-selecte:valid:focus,
+  .is-focused .custom-selecte.is-valid:focus {
     border-color: #999999;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.25); }
   .was-validated .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .is-focused .form-control:valid ~ .valid-tooltip, .is-focused .form-control.is-valid ~ .valid-feedback,
   .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .is-focused .custom-select:valid ~ .valid-feedback,
+  .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .is-focused .custom-select:valid ~ .valid-tooltip,
-  .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .is-focused .form-check-input:valid ~ .form-check-label, .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -9896,23 +9896,23 @@ fieldset[disabled][disabled] .has-success .form-control, .has-success .form-cont
   border-radius: .2rem; }
 
 .was-validated .has-success .is-focused .form-control:valid, .has-success .is-focused .form-control.is-valid, .was-validated
-.has-success .is-focused .custom-select:valid,
-.has-success .is-focused .custom-select.is-valid {
+.has-success .is-focused .custom-selecte:valid,
+.has-success .is-focused .custom-selecte.is-valid {
   border-color: #4caf50; }
   .was-validated .has-success .is-focused .form-control:valid:focus, .has-success .is-focused .form-control.is-valid:focus, .was-validated
-  .has-success .is-focused .custom-select:valid:focus,
-  .has-success .is-focused .custom-select.is-valid:focus {
+  .has-success .is-focused .custom-selecte:valid:focus,
+  .has-success .is-focused .custom-selecte.is-valid:focus {
     border-color: #4caf50;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25); }
   .was-validated .has-success .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-success .is-focused .form-control:valid ~ .valid-tooltip, .has-success .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-success .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-success .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-success .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-success .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-success .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-success .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-success .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-success .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-success .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-success .is-focused .form-check-input:valid ~ .form-check-label, .has-success .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10024,23 +10024,23 @@ fieldset[disabled][disabled] .has-info .form-control, .has-info .form-control.di
   border-radius: .2rem; }
 
 .was-validated .has-info .is-focused .form-control:valid, .has-info .is-focused .form-control.is-valid, .was-validated
-.has-info .is-focused .custom-select:valid,
-.has-info .is-focused .custom-select.is-valid {
+.has-info .is-focused .custom-selecte:valid,
+.has-info .is-focused .custom-selecte.is-valid {
   border-color: #00bcd4; }
   .was-validated .has-info .is-focused .form-control:valid:focus, .has-info .is-focused .form-control.is-valid:focus, .was-validated
-  .has-info .is-focused .custom-select:valid:focus,
-  .has-info .is-focused .custom-select.is-valid:focus {
+  .has-info .is-focused .custom-selecte:valid:focus,
+  .has-info .is-focused .custom-selecte.is-valid:focus {
     border-color: #00bcd4;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.25); }
   .was-validated .has-info .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-info .is-focused .form-control:valid ~ .valid-tooltip, .has-info .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-info .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-info .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-info .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-info .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-info .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-info .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-info .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-info .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-info .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-info .is-focused .form-check-input:valid ~ .form-check-label, .has-info .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10152,23 +10152,23 @@ fieldset[disabled][disabled] .has-white .form-control, .has-white .form-control.
   border-radius: .2rem; }
 
 .was-validated .has-white .is-focused .form-control:valid, .has-white .is-focused .form-control.is-valid, .was-validated
-.has-white .is-focused .custom-select:valid,
-.has-white .is-focused .custom-select.is-valid {
+.has-white .is-focused .custom-selecte:valid,
+.has-white .is-focused .custom-selecte.is-valid {
   border-color: #fff; }
   .was-validated .has-white .is-focused .form-control:valid:focus, .has-white .is-focused .form-control.is-valid:focus, .was-validated
-  .has-white .is-focused .custom-select:valid:focus,
-  .has-white .is-focused .custom-select.is-valid:focus {
+  .has-white .is-focused .custom-selecte:valid:focus,
+  .has-white .is-focused .custom-selecte.is-valid:focus {
     border-color: #fff;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25); }
   .was-validated .has-white .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-white .is-focused .form-control:valid ~ .valid-tooltip, .has-white .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-white .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-white .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-white .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-white .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-white .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-white .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-white .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-white .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-white .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-white .is-focused .form-check-input:valid ~ .form-check-label, .has-white .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10283,23 +10283,23 @@ fieldset[disabled][disabled] .has-warning .form-control, .has-warning .form-cont
   border-radius: .2rem; }
 
 .was-validated .has-warning .is-focused .form-control:valid, .has-warning .is-focused .form-control.is-valid, .was-validated
-.has-warning .is-focused .custom-select:valid,
-.has-warning .is-focused .custom-select.is-valid {
+.has-warning .is-focused .custom-selecte:valid,
+.has-warning .is-focused .custom-selecte.is-valid {
   border-color: #ff9800; }
   .was-validated .has-warning .is-focused .form-control:valid:focus, .has-warning .is-focused .form-control.is-valid:focus, .was-validated
-  .has-warning .is-focused .custom-select:valid:focus,
-  .has-warning .is-focused .custom-select.is-valid:focus {
+  .has-warning .is-focused .custom-selecte:valid:focus,
+  .has-warning .is-focused .custom-selecte.is-valid:focus {
     border-color: #ff9800;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25); }
   .was-validated .has-warning .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-warning .is-focused .form-control:valid ~ .valid-tooltip, .has-warning .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-warning .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-warning .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-warning .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-warning .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-warning .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-warning .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-warning .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-warning .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-warning .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-warning .is-focused .form-check-input:valid ~ .form-check-label, .has-warning .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10411,23 +10411,23 @@ fieldset[disabled][disabled] .has-danger .form-control, .has-danger .form-contro
   border-radius: .2rem; }
 
 .was-validated .has-danger .is-focused .form-control:valid, .has-danger .is-focused .form-control.is-valid, .was-validated
-.has-danger .is-focused .custom-select:valid,
-.has-danger .is-focused .custom-select.is-valid {
+.has-danger .is-focused .custom-selecte:valid,
+.has-danger .is-focused .custom-selecte.is-valid {
   border-color: #f44336; }
   .was-validated .has-danger .is-focused .form-control:valid:focus, .has-danger .is-focused .form-control.is-valid:focus, .was-validated
-  .has-danger .is-focused .custom-select:valid:focus,
-  .has-danger .is-focused .custom-select.is-valid:focus {
+  .has-danger .is-focused .custom-selecte:valid:focus,
+  .has-danger .is-focused .custom-selecte.is-valid:focus {
     border-color: #f44336;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(244, 67, 54, 0.25); }
   .was-validated .has-danger .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-danger .is-focused .form-control:valid ~ .valid-tooltip, .has-danger .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-danger .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-danger .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-danger .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-danger .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-danger .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-danger .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-danger .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-danger .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-danger .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-danger .is-focused .form-check-input:valid ~ .form-check-label, .has-danger .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10539,23 +10539,23 @@ fieldset[disabled][disabled] .has-rose .form-control, .has-rose .form-control.di
   border-radius: .2rem; }
 
 .was-validated .has-rose .is-focused .form-control:valid, .has-rose .is-focused .form-control.is-valid, .was-validated
-.has-rose .is-focused .custom-select:valid,
-.has-rose .is-focused .custom-select.is-valid {
+.has-rose .is-focused .custom-selecte:valid,
+.has-rose .is-focused .custom-selecte.is-valid {
   border-color: #e91e63; }
   .was-validated .has-rose .is-focused .form-control:valid:focus, .has-rose .is-focused .form-control.is-valid:focus, .was-validated
-  .has-rose .is-focused .custom-select:valid:focus,
-  .has-rose .is-focused .custom-select.is-valid:focus {
+  .has-rose .is-focused .custom-selecte:valid:focus,
+  .has-rose .is-focused .custom-selecte.is-valid:focus {
     border-color: #e91e63;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
             box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25); }
   .was-validated .has-rose .is-focused .form-control:valid ~ .valid-feedback,
   .was-validated .has-rose .is-focused .form-control:valid ~ .valid-tooltip, .has-rose .is-focused .form-control.is-valid ~ .valid-feedback,
   .has-rose .is-focused .form-control.is-valid ~ .valid-tooltip, .was-validated
-  .has-rose .is-focused .custom-select:valid ~ .valid-feedback,
+  .has-rose .is-focused .custom-selecte:valid ~ .valid-feedback,
   .was-validated
-  .has-rose .is-focused .custom-select:valid ~ .valid-tooltip,
-  .has-rose .is-focused .custom-select.is-valid ~ .valid-feedback,
-  .has-rose .is-focused .custom-select.is-valid ~ .valid-tooltip {
+  .has-rose .is-focused .custom-selecte:valid ~ .valid-tooltip,
+  .has-rose .is-focused .custom-selecte.is-valid ~ .valid-feedback,
+  .has-rose .is-focused .custom-selecte.is-valid ~ .valid-tooltip {
     display: block; }
 
 .was-validated .has-rose .is-focused .form-check-input:valid ~ .form-check-label, .has-rose .is-focused .form-check-input.is-valid ~ .form-check-label {
@@ -10895,7 +10895,7 @@ label {
   .bmd-form-group.is-focused .form-control.form-control-danger {
     background-size: 100% 100%, 100% 100%, 0.9375rem 0.9375rem; }
 
-select, select.form-control {
+selecte, selecte.form-control {
   -moz-appearance: none;
   -webkit-appearance: none; }
 
@@ -12646,10 +12646,10 @@ h2.title {
 .togglebutton {
   vertical-align: middle; }
   .togglebutton, .togglebutton label, .togglebutton input, .togglebutton .toggle {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none; }
+    -webkit-user-selecte: none;
+       -moz-user-selecte: none;
+        -ms-user-selecte: none;
+            user-selecte: none; }
   .togglebutton label {
     cursor: pointer;
     color: rgba(0,0,0, 0.26); }
@@ -13954,7 +13954,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
 a[aria-expanded="true"] .caret,
 .dropdown.open .caret,
 .dropup.open .caret,
-.btn-group.bootstrap-select.open .caret {
+.btn-group.bootstrap-selecte.open .caret {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg); }

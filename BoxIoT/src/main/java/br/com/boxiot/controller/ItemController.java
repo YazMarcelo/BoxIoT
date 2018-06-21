@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.boxiot.dao.ItemDAO;
+import br.com.boxiot.dao.LocalDAO;
 import br.com.boxiot.model.Item;
 import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
@@ -28,7 +29,9 @@ public class ItemController {
 	@Autowired
 	private ItemDAO itemDAO;
 	
-	private String lstMsgSucesso;
+	@Autowired
+	private LocalDAO localDAO;
+	
 
 	/*@InitBinder*/
 	/*protected void initBinder(WebDataBinder binder) {
@@ -38,6 +41,7 @@ public class ItemController {
 	@RequestMapping("/cadastro")
 	public ModelAndView form(Item item) {
 		ModelAndView modelAndView = new ModelAndView("item/cadastro");
+		modelAndView.addObject("locais", localDAO.list());
 		return modelAndView;
 	}
 
@@ -73,6 +77,7 @@ public class ItemController {
 	public ModelAndView alterar(@PathVariable("id") int id, Item item){
 	ModelAndView modelAndView = new ModelAndView("item/alteracao");
 	modelAndView.addObject("item", itemDAO.obterItem(id));
+	modelAndView.addObject("locais", localDAO.list());
 	return modelAndView;
 }
 	

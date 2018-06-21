@@ -35,6 +35,7 @@ public class ModoDAO {
 		
 		if(modo.getId() != null) {
 			manager.merge(modo);
+			itmoDAO.excluirPorModo(modo.getId());
 		} else {
 			manager.persist(modo);	
 		}
@@ -44,7 +45,7 @@ public class ModoDAO {
 
 	public List<Modo> list() {
 		return manager
-				.createQuery("select distinct(m) from Modo m where m.excluido = false", Modo.class)
+				.createQuery("select distinct(m) from Modo m where m.excluido = false  ORDER BY m.descricao", Modo.class)
 				.getResultList();
 	}
 

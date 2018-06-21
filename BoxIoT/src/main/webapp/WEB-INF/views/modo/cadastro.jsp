@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body">
                     	<form action="#">
-                            <input type="hidden" name="id_controle" value="" />
+                            <input type="hidden" id="id_controle" name="id_controle" value="" />
                             <h5><b>Campos Obrigatórios</b><b style="color:#ff0000">*</b></h5>
 
 
@@ -104,14 +104,14 @@
 	    
 	    	$("#btn-salvar").click(function(){
 	    		$.ajax({
-			        url: "/BoxIoT/modo",
-			        data: 'json=' + JSON.stringify({"descricao": $("#descricao").val(), "itens":[getItens()]}),
+	    			url: "/BoxIoT/modo/salvar",
+			        contentType: 'application/json',
+			        dataType: "json",
+			        data: JSON.stringify({"idModo":$("#id_controle").val(),"descricao": $("#descricao").val(), "itens":[getItens()]}),
 			        type: "POST",
 			        async: false,
 			        complete: function (resultado) {
-						excluirLinha($(linha));
-						$("#notf").html("Exclusão efetuada com sucesso!");
-						$("#modal-notf").click();
+			        	window.location.replace("http://localhost:8080/BoxIoT/modo");
 			        }
 			    });
 	    	});

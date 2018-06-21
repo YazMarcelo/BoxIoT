@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import org.springframework.stereotype.Repository;
 
@@ -33,6 +34,16 @@ public class ItemModoDAO {
 		return manager
 				.createQuery("select distinct(i) from ItemModo i where i.id = "+id+" and i.excluido = false", ItemModo.class)
 				.getSingleResult();
+	}
+	
+	public List<ItemModo> obterPorModo(int idModo) {
+		return manager
+				.createQuery("select distinct(i) from ItemModo i where i.idModo = " + idModo + " and i.excluido = false", ItemModo.class)
+				.getResultList();
+	}
+	
+	public void excluirPorModo(int idModo) {
+		manager.createQuery("UPDATE ItemModo im SET im.excluido = true WHERE im.idModo="+idModo).executeUpdate();
 	}
 	
 	public void delete(ItemModo itemModo) {

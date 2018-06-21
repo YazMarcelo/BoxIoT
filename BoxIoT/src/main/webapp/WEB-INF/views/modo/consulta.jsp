@@ -35,10 +35,10 @@
 										<tr>
 											<td>${modo.descricao}</td>
 											<td style="width:100px;" class="center">
-                                            	<a href="${pageContext.request.contextPath}/local/alteracao/${modo.id}" style="padding-right:20px;">
+                                            	<a href="${pageContext.request.contextPath}/modo/alteracao/${modo.id}" style="padding-right:20px;">
                                                 	<i class="fa fa-pencil" aria-hidden="true"></i>
 												</a>
-                                                <a class="remove-line" href="#" data-href="${pageContext.request.contextPath}/local/excluir/${modo.id}">
+                                                <a class="remove-line" href="#" data-href="${pageContext.request.contextPath}/modo/excluir/${modo.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
                                             </td>

@@ -25,19 +25,10 @@ public class ItemDAO {
 			manager.persist(item);	
 		}
 	}
-	
-	public void saveModo(Modo modo) {
-		if(modo.getId() != null) {
-			manager.merge(modo);
-		} else {
-			manager.persist(modo);	
-		}
-		
-	}
 
 	public List<Item> list() {
 		return manager
-				.createQuery("select distinct(i) from Item i where i.excluido = false", Item.class)
+				.createQuery("select distinct(i) from Item i where i.excluido = false ORDER BY i.descricao", Item.class)
 				.getResultList();
 	}
 

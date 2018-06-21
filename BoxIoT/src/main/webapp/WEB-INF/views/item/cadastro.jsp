@@ -14,6 +14,7 @@
                     <div class="card-header card-header-primary">
                         <h4 class="card-title">Cadastrar Item</h4>
                     </div>
+                            
                     <div class="card-body">
                     	<form:form method="post" action="/BoxIoT/item" commandName="item">
                     	<h5><b>Campos Obrigatórios</b><b style="color:#ff0000">*</b></h5>
@@ -21,19 +22,21 @@
 
                     		<!--Campos-->
                             <input type="hidden" name="id_controle" value="" />
-                            <!-- <div class="row">
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="nome">Local<b style="color:#ff0000">*</b></label>
                                          <br>
-                                         <select class="selectpicker" data-style="btn btn-primary btn-round" title="Single Select" data-size="7">
-                            <option disabled selected>Choose city</option>
-                            <option value="2">Foobar</option>
-                            <option value="3">Is great</option>
-                          </select>
+                                         <form:input path="idLocal" class="form-control form-idlocal" style="display:none;"/>
+                                          <select id="select-idlocal" data-plugin-selectTwo class="form-control populate" required>
+                                          					<option value="" selected>Selecione...</option>
+                                          					<c:forEach items="${locais}" var="local">
+                                          						<option value="${local.id}">${local.descricao}</option>
+                                          					</c:forEach>
+													</select>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -47,7 +50,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                          <label class="bmd-label-floating" for="email">Saída<b style="color:#ff0000">*</b></label>
-                                         <form:input required="required" type="number" path="saida" class="form-control"/>
+                                         <form:input required="required" type="number" path="saida" class="form-control" value=""/>
 										 <form:errors path="saida" />
                                     </div>
                                 </div>
@@ -62,5 +65,15 @@
         </div>
     </div>
 </div>
+	</jsp:attribute>
+	<jsp:attribute name="js_personalizado">
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.js"></script>
+	<!-- Theme Initialization Files -->
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.init.js"></script>
+	    <script type="text/javascript">
+	    	$("#select-idlocal").change(function(){
+	    		$("#idLocal").val($(this).val());
+	    	});
+		</script>
 	</jsp:attribute>
 </mt:simpletemplate>

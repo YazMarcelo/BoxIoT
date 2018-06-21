@@ -1,16 +1,24 @@
 package br.com.boxiot.controller;
 
 
+import java.util.Collection;
+import java.util.Map;
+
 import javax.transaction.Transactional;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.boxiot.dao.ItemDAO;
 import br.com.boxiot.dao.ItemModoDAO;
@@ -44,9 +52,10 @@ public class ModoController {
 		return modelAndView;
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
-	public ModelAndView save(String json) throws JSONException {
-		
+	@RequestMapping(value="/salvar", method = RequestMethod.POST, consumes = "application/json")
+	@ResponseBody
+	public String save(@RequestBody String json, BindingResult bindingResult,
+			RedirectAttributes redirectAttributes) throws JSONException {
 		json = json.replace("[\"", "[").replace("\"]", "]").replace("\\","");
 		JSONObject obj = new JSONObject(json);
 		JSONArray itens = obj.getJSONArray("itens");
@@ -54,9 +63,19 @@ public class ModoController {
 		Modo modo = new Modo();
 		modo.setDescricao(obj.getString("descricao"));
 		
-		int idModo = modoDAO.save(modo);
+		int idModo = obj.getString("idModo") != null && !(obj.getString("idModo").isEmpty()) ? obj.getInt("idModo") : 0;
+		
+		if(idModo > 0) {
+			modo.setId(idModo);
+			modoDAO.save(modo);
+		}
+		else
+			idModo = modoDAO.save(modo);
+		
+		
 		
 		int n = itens.length();
+		itmoDAO.excluirPorModo(idModo);
 	    for (int i = 0; i < n; ++i) {
 	    	JSONObject item = itens.getJSONObject(i);
 	    	itmoDAO.save(new ItemModo(item.getInt("id"), idModo, item.getInt("porcentagem")));
@@ -64,7 +83,9 @@ public class ModoController {
 	    
 	    //modoDAO.save(modo, listItemModo);
 	    
-		return new ModelAndView("redirect:modo");
+	    redirectAttributes.addAttribute("msg", "Cadastro efetuado com sucesso!");
+	    
+		return "ok";
 	}
 	
 
@@ -77,9 +98,14 @@ public class ModoController {
 	
 	@RequestMapping("/alteracao/{id}")
 	public ModelAndView alterar(@PathVariable("id") int id, Modo modo){
-	ModelAndView modelAndView = new ModelAndView("modo/alteracao");
-	modelAndView.addObject("modo", modoDAO.obterModo(id));
-	return modelAndView;
+		ModelAndView modelAndView = new ModelAndView("modo/alteracao");
+		Modo modoAlteracao = modoDAO.obterModo(id);
+		modelAndView.addObject("modo", modoAlteracao);
+		modelAndView.addObject("itensModo", itmoDAO.obterPorModo(modoAlteracao.getId()));
+		modelAndView.addObject("locais", localDAO.list());
+		modelAndView.addObject("itens", itemDAO.list());
+		
+		return modelAndView;
 }
 	@RequestMapping("/excluir/{id}")
 	public ModelAndView excluir(@PathVariable("id") int id){

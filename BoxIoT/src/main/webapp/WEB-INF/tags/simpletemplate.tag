@@ -27,7 +27,11 @@
 	
 	<style>
 	.ui-slider-range.ui-corner-all.ui-widget-header.ui-slider-range-min{
-	background: #942bae;
+		background: #942bae;
+	}
+	
+	span.select2.select2-container.select2-container--bootstrap.select2-container--focus{
+		width:100% !important;
 	}
 	</style>
     
@@ -91,12 +95,12 @@ text-align:center !important;
                             <p>Usuário</p>
                         </a>
                     </li>
-                    <li class="nav-item ">
+                    <!-- <li class="nav-item ">
                         <a class="nav-link" href="${pageContext.request.contextPath}/usuario">
                             <i class="fa fa-unlock-alt"></i>
                             <p>Permissão</p>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -255,7 +259,6 @@ text-align:center !important;
     <script src="${pageContext.request.contextPath}/resources/template/vendor/nanoscroller/nanoscroller.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-placeholder/jquery-placeholder.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/template2/assets/js/plugins/jquery.select-bootstrap.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/template/vendor/jquery-ui/jquery-ui.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/template/vendor/jqueryui-touch-punch/jqueryui-touch-punch.js"></script>
     

@@ -22,6 +22,27 @@
                     		<!--Campos-->
                     	<form:input path="id" type="hidden" value="${item.id}"/>
                             <input type="hidden" name="id_controle" value="" />
+                                                        <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                         <label class="bmd-label-floating" for="nome">Local<b style="color:#ff0000">*</b></label>
+                                         <br>
+                                         <form:input path="idLocal" class="form-control form-idlocal" style="display:none;"/>
+                                          <select id="select-idlocal" data-plugin-selectTwo class="form-control populate" required>
+                                          					<c:forEach items="${locais}" var="local">
+                                          						<c:choose>
+                                          							<c:when test="${local.id == item.idLocal}">
+                                          								<option value="${local.id}" selected>${local.descricao}</option>
+                                          							</c:when>
+                                          							<c:otherwise>
+                                          								<option value="${local.id}">${local.descricao}</option>
+                                          							</c:otherwise>
+                                          						</c:choose>
+                                          					</c:forEach>
+													</select>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -50,5 +71,15 @@
         </div>
     </div>
 </div>
+	</jsp:attribute>
+		<jsp:attribute name="js_personalizado">
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.js"></script>
+	<!-- Theme Initialization Files -->
+	<script src="${pageContext.request.contextPath}/resources/template/js/theme.init.js"></script>
+	    <script type="text/javascript">
+	    	$("#select-idlocal").change(function(){
+	    		$("#idLocal").val($(this).val());
+	    	});
+		</script>
 	</jsp:attribute>
 </mt:simpletemplate>

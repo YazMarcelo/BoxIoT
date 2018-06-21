@@ -27,7 +27,7 @@ public class LocalDAO {
 
 	public List<Local> list() {
 		return manager
-				.createQuery("select distinct(l) from Local l where l.excluido = false", Local.class)
+				.createQuery("select distinct(l) from Local l where l.excluido = false  ORDER BY l.descricao", Local.class)
 				.getResultList();
 	}
 
