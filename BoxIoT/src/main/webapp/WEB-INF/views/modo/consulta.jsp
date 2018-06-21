@@ -28,6 +28,7 @@
                                     <tr>
                                         <th>Descrição</th>
                                         <th>Ações</th>
+                                        <th>Funções</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,6 +42,15 @@
                                                 <a class="remove-line" href="#" data-href="${pageContext.request.contextPath}/modo/excluir/${modo.id}">
                                                 	<i class="fa fa-remove" aria-hidden="true"></i>
 												</a>
+                                            </td>
+                                            <td style="width:100px;">
+                                            	<div class="dropdown">
+													<button onclick="myFunction()" class="dropbtn">Funções</button>
+  														<div id="myDropdown${modo.id}" class="dropdown-content">
+    														<a href="#home">Ativar</a>
+    														<a href="#about">Desativar</a>
+  														</div>
+												</div>
                                             </td>
 										</tr>
 									</c:forEach>
@@ -56,5 +66,30 @@
 	</jsp:attribute>
 	<jsp:attribute name="js_personalizado">
 	    <script src="${pageContext.request.contextPath}/resources/scripts/consulta.js"></script>
+	    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+$(".dropbtn").click(function(){
+	document.getElementById(""+$(this).next().attr('id')).classList.toggle("show");
+});
+function myFunction() {
+    
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 	</jsp:attribute>
 </mt:simpletemplate>
