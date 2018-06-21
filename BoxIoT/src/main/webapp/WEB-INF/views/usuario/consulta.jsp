@@ -5,7 +5,7 @@
 <style>
 <!---->
 </style>
-<mt:simpletemplate title="Home Page">
+<mt:simpletemplate title="Consulta de Usuário">
 	<jsp:attribute name="content">
 	<label id="label-msg" hide style="display:none">${msg}</label>
 			<div class="content">

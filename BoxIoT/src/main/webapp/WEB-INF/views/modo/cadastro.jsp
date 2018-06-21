@@ -4,7 +4,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="mt" tagdir="/WEB-INF/tags" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<mt:simpletemplate title="Usuario - Cadastro">
+<mt:simpletemplate title="Cadastro de Modo">
 	<jsp:attribute name="content">
 		<div class="content">
     <div class="container-fluid">
