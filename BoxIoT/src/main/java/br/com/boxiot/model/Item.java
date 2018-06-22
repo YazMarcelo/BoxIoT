@@ -30,6 +30,9 @@ public class Item{
 	@Column(name="item_local_id")
 	private	int idLocal;
 	
+	@Column(name="item_ligado")
+	private	Boolean ligado;
+	
 	@Column(name="excluido")
 	private Boolean excluido = false;
 

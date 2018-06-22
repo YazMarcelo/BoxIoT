@@ -111,7 +111,7 @@
 			        type: "POST",
 			        async: false,
 			        complete: function (resultado) {
-			        	window.location.replace("http://localhost:8080/BoxIoT/modo");
+			        	window.location.replace("http://localhost:8180/BoxIoT/modo");
 			        }
 			    });
 	    	});

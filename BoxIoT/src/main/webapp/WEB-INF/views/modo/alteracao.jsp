@@ -158,7 +158,7 @@
 			        async: false,
 			        complete: function (resultado) {
 						if(resultado.responseText == "ok"){
-							window.location.replace("http://localhost:8080/BoxIoT/modo");
+							window.location.replace("http://localhost:8180/BoxIoT/modo");
 						}
 			        }
 			    });

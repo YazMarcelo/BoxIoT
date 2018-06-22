@@ -26,7 +26,7 @@ public class UsuarioDAO {
 
 	public List<Usuario> list() {
 		return manager
-				.createQuery("select distinct(u) from Usuario u where u.excluido = false  ORDER BY u.descricao", Usuario.class)
+				.createQuery("select distinct(u) from Usuario u where u.excluido = false  ORDER BY u.nome", Usuario.class)
 				.getResultList();
 	}
 
