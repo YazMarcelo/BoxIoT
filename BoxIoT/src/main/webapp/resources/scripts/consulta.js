@@ -21,6 +21,28 @@
 		    });
 		});
 	});
+	
+	$(".ligar-item").click(function(){
+		var linha = $(this);
+		    $.ajax({
+		        url: $(linha).attr("data-href"),
+		        type: "POST",
+		        async: false,
+		        complete: function (resultado) {
+		        }
+		});
+	});
+	
+	$(".desligar-item").click(function(){
+		var linha = $(this);
+		    $.ajax({
+		        url: $(linha).attr("data-href"),
+		        type: "POST",
+		        async: false,
+		        complete: function (resultado) {
+		        }
+		    });
+	});
 });
 
 function excluirLinha(element){

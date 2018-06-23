@@ -85,6 +85,20 @@ public class ItemController {
 		itemDAO.save(item);
 	}
 	
+	@RequestMapping("/ligar/{id}")
+	public void ligar(@PathVariable("id") int id){
+		Item item = itemDAO.obterItem(id);
+		item.setLigado(true);
+		itemDAO.save(item);
+	}
+	
+	@RequestMapping("/desligar/{id}")
+	public void desligar(@PathVariable("id") int id){
+		Item item = itemDAO.obterItem(id);
+		item.setLigado(false);
+		itemDAO.save(item);
+	}
+	
 //	public ModelAndView alterar(Item item) {
 //		ModelAndView modelAndView = new ModelAndView("item/alteracao");
 //		return modelAndView;

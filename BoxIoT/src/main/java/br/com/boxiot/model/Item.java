@@ -33,6 +33,14 @@ public class Item{
 	@Column(name="item_ligado")
 	private	Boolean ligado;
 	
+	public Boolean getLigado() {
+		return ligado;
+	}
+
+	public void setLigado(Boolean ligado) {
+		this.ligado = ligado;
+	}
+
 	@Column(name="excluido")
 	private Boolean excluido = false;
 

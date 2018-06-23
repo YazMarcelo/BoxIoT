@@ -49,8 +49,8 @@
                                             	<div class="dropdown">
 													<button onclick="myFunction()" class="dropbtn">Funções</button>
   														<div id="myDropdown${item.id}" class="dropdown-content">
-    														<a href="#home">Ligar</a>
-    														<a href="#about">Desligar</a>
+    														<a class="ligar-item" href="#" data-href="${pageContext.request.contextPath}/item/ligar/${item.id}">Ligar</a>
+    														<a class="desligar-item" href="#" data-href="${pageContext.request.contextPath}/item/desligar/${item.id}">Desligar</a>
   														</div>
 												</div>
                                             </td>
