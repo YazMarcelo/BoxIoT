@@ -20,7 +20,7 @@ import br.com.boxiot.dao.ProdutoDAO;
 import br.com.boxiot.model.Item;
 import br.com.boxiot.model.Local;
 import br.com.boxiot.model.Usuario;
-import br.com.boxiot.validation.ProdutoValidator;
+import br.com.boxiot.util.ProdutoValidator;
 
 @Controller
 @Transactional
@@ -63,7 +63,7 @@ public class UsuarioController {
 		
 		usuarioDAO.save(usuario);
 		
-		msg = alteracao ? "Alteração efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
+		msg = alteracao ? "Alteraï¿½ï¿½o efetuada com sucesso!" : "Cadastro efetuado com sucesso!";
 		
 		redirectAttributes.addFlashAttribute("msg", msg);
 		return new ModelAndView("redirect:usuario");
@@ -107,7 +107,7 @@ public class UsuarioController {
 		}
 		System.out.println("salvar produto...");
 		usuarioDAO.save(usuario);
-		redirectAttributes.addFlashAttribute("sucesso", "Usuário cadastrado	com	sucesso");
+		redirectAttributes.addFlashAttribute("sucesso", "Usuï¿½rio cadastrado	com	sucesso");
 		return new ModelAndView("redirect:usuario");
 	}*/
 

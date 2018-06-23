@@ -1,4 +1,4 @@
-package br.com.boxiot.validation;
+package br.com.boxiot.util;
 
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;

@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.boxiot.dao.ProdutoDAO;
 import br.com.boxiot.model.Produto;
-import br.com.boxiot.validation.ProdutoValidator;
+import br.com.boxiot.util.ProdutoValidator;
 
 @Controller
 @Transactional
